@@ -1,7 +1,7 @@
 /**********************************************************************
 *File        - MultiThread.java
 *Author      - Anu Mathew
-*Description - implementation multithreading
+*Description - java program to implementat multithreading
 *Date        - 28/1/2021
 *Version     - 1.0 
 ********************************************************************/
