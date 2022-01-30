@@ -1,5 +1,5 @@
 /**********************************************************************
-*File        - Thread.java
+*File        - MultiThread.java
 *Author      - Anu Mathew
 *Description - implementation multithreading
 *Date        - 28/1/2021
