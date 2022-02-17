@@ -9,23 +9,25 @@ import java.awt.Frame;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.Button;
 import java.awt.Label;
 import java.awt.FlowLayout;
+import java.awt.event.WindowListener;
 
-public class SignUpForm extends Frame implements ActionListener{
+public class SignUpForm extends Frame implements ActionListener,WindowListener{
     TextField textField1 =new TextField(20);
     TextField textField2 =new TextField(20);
     TextField textField3 =new TextField(20);
     TextField textField4 =new TextField(20);
-    
+   
     private Label name,userName,email,password;
-    
+   
     Button button;
     SignUpForm(){
         //Frame setting
         setTitle("Sign Up Here");
-        setSize(380,250);
+        setSize(300,250);
         setVisible(true);
         setLayout(new FlowLayout());
         //name
@@ -53,16 +55,57 @@ public class SignUpForm extends Frame implements ActionListener{
         button.setBounds(150,160,60,30);
         add(button);    
         button.addActionListener(this);
-  
+        addWindowListener(this);
+   
     }
+   
     public void actionPerformed(ActionEvent e) {
         System.out.println("Name       :"+textField1.getText());
-		System.out.println("Email ID   :"+textField2.getText());
-		System.out.println("User Name  :"+textField3.getText());
-		System.out.println("Password   : "+textField4.getText());
-        
+System.out.println("Email ID   :"+textField2.getText());
+System.out.println("User Name  :"+textField3.getText());
+System.out.println("Password   : "+textField4.getText());
+       
     }
+    public void windowListener(WindowEvent e) {
+    System.exit(0);
+    }
+   
     public static void main(String[] args){
         SignUpForm form =new SignUpForm();
     }
+
+
+public void windowOpened(WindowEvent e) {
+
+}
+
+
+public void windowClosing(WindowEvent e) {
+dispose();
+
+}
+
+
+public void windowClosed(WindowEvent e) {
+
+}
+
+public void windowIconified(WindowEvent e) {
+
+}
+
+public void windowDeiconified(WindowEvent e) {
+
+
+}
+
+public void windowActivated(WindowEvent e) {
+
+
+}
+
+
+public void windowDeactivated(WindowEvent e) {
+
+}
 }
