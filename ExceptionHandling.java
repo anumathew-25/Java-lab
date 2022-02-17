@@ -16,7 +16,7 @@ class Throw{
             int num2=input.nextInt();
             if(num2==0){
                 
-                throw new ArithmeticException("Arithmetic Exception Occured.You should not divide a number by zero");
+                throw new ArithmeticException("\nArithmetic Exception Occurred.You should not divide a number by zero");
 
             }
             else{
